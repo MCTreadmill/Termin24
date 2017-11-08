@@ -242,6 +242,15 @@ public class MainActivity extends AppCompatActivity implements OnProductSelected
                     ReviewerTools.writeToFile(new Date().toString(), this, "myfile.txt");
                 }
                 break;
+            case R.id.action_test:
+                if (isStoragePermissionGranted()) {
+                    if (ReviewerTools.isFileExists(MainActivity.this, "myfile.txt")) {
+                        Toast.makeText(MainActivity.this, "File exists", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(MainActivity.this, "File doesn't exist", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
         }
 
         return super.onOptionsItemSelected(item);

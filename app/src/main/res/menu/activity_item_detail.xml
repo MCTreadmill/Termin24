@@ -13,4 +13,9 @@
         android:title="@string/fragment_detal_action_add"
         android:icon="@drawable/ic_action_add"
         app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_test"
+        android:title="@string/tbaction_test"
+        android:icon="@drawable/ic_action_check"
+        app:showAsAction="ifRoom" />
 </menu>

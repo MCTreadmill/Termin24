@@ -48,5 +48,6 @@
     <string name="pref_notif">pref_notif</string>
     <string name="pref_notif_summ">Show the message as a Notification</string>
     <string name="pref_notif_title">Use Notification</string>
+    <string name="tbaction_test">Test</string>
 
 </resources>
