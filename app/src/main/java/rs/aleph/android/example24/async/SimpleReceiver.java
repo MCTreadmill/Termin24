@@ -31,6 +31,19 @@ public class SimpleReceiver extends BroadcastReceiver{
 
     private static int notificationID = 1;
 
+    private void readFileAndFillList(Context context){
+        // Load product names from array resource
+
+        String[] products = ReviewerTools.readFromFile(context,"myfile.txt").split("\n");
+
+        // Create an ArrayAdaptar from the array of Strings
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, R.layout.list_item, products);
+        ListView listView = (ListView) ((Activity)context).findViewById(R.id.products);
+
+        // Assign adapter to ListView
+        listView.setAdapter(adapter);
+    }
+
     @Override
     /**
      * Intent je bitan parametar za BroadcastReceiver. Kada posaljemo neku poruku,
@@ -46,10 +59,17 @@ public class SimpleReceiver extends BroadcastReceiver{
          * nazivom akcije kada akciju proveravamo unutar BroadcastReceiver-a. Isto vazi i za podatke.
          * Dobra praksa je da se ovi nazivi izdvoje unutar neke staticke promenljive.
          * */
-        if(intent.getAction().equals("SYNC_DATA")){
-            int resultCode = intent.getExtras().getInt("RESULT_CODE");
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
-            prepareNotification(resultCode, context);
+
+        if(intent.getAction().equals("SYNC_DATA")){
+            boolean allowMessage = sharedPreferences.getBoolean(context.getString(R.string.pref_notif), false);
+
+            if (allowMessage) {
+                int resultCode = intent.getExtras().getInt("RESULT_CODE");
+                prepareNotification(resultCode, context);
+            }
+            readFileAndFillList(context);
         }
     }
 

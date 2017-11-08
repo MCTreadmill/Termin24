@@ -46,7 +46,7 @@
     <string name="notif_cat_title">Notifications</string>
     <string name="notif_cat_key">notif_settings</string>
     <string name="pref_notif">pref_notif</string>
-    <string name="pref_notif_summ">Use Notifications for the message instead of Toast</string>
+    <string name="pref_notif_summ">Show the message as a Notification</string>
     <string name="pref_notif_title">Use Notification</string>
 
 </resources>
