@@ -41,5 +41,12 @@
     <string name="connect_to_wifi">Please connect to wifi to sync data</string>
     <string name="autosync">Automatic Sync</string>
     <string name="good_news_sync">Good news, everything is sync now.</string>
+    <string name="auto_data_sync">Auto data sync</string>
+    <string name="sync_settings">sync_settings</string>
+    <string name="notif_cat_title">Notifications</string>
+    <string name="notif_cat_key">notif_settings</string>
+    <string name="pref_notif">pref_notif</string>
+    <string name="pref_notif_summ">Use Notifications for the message instead of Toast</string>
+    <string name="pref_notif_title">Use Notification</string>
 
 </resources>

@@ -2,8 +2,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <PreferenceCategory 
-        android:title="Auto data sync" 
-        android:key="sync_settings">
+        android:title="@string/auto_data_sync"
+        android:key="@string/sync_settings">
         
         <CheckBoxPreference
             android:defaultValue="false"
@@ -22,5 +22,17 @@
             android:defaultValue="1"/>
         
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/notif_cat_title"
+        android:key="@string/notif_cat_key">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_notif"
+            android:summary="@string/pref_notif_summ"
+            android:title="@string/pref_notif_title"/>
+    </PreferenceCategory>
+
 
 </PreferenceScreen>

@@ -34,5 +34,12 @@
     <string name="drawer_Settings_long">Промени подешавања апликације</string>
     <string name="drawer_about">О апликацији</string>
     <string name="drawer_about_long">О апликацији</string>
+    <string name="auto_data_sync">Auto data sync</string>
+    <string name="sync_settings">sync_settings</string>
+    <string name="notif_cat_title">Notifications</string>
+    <string name="notif_cat_key">notif_settings</string>
+    <string name="pref_notif">pref_notif</string>
+    <string name="pref_notif_summ">Use Notifications for the message instead of Toast</string>
+    <string name="pref_notif_title">Use Notification</string>
 
 </resources>
